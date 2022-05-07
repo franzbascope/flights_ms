@@ -1,0 +1,43 @@
+{
+    "name": "franz/fligths",
+    "description": ":package_description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Author Name",
+            "email": "author@email.com",
+            "homepage": "http://author.com"
+        }
+    ],
+    "homepage": "https://github.com/franz/fligths",
+    "keywords": ["Laravel", "Fligths"],
+    "require": {
+        "illuminate/support": "~9",
+        "guzzlehttp/guzzle": "^7.4",
+        "ecotone/laravel": "^1.22"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Franz\\Fligths\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Franz\\Fligths\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Franz\\Fligths\\FligthsServiceProvider"
+            ],
+            "aliases": {
+                "Fligths": "Franz\\Fligths\\Facades\\Fligths"
+            }
+        }
+    }
+}
