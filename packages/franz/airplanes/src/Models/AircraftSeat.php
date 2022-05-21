@@ -26,7 +26,7 @@ class AircraftSeat extends Entity
     {
         return [
             "class" => $this->class->getValue(),
-            "code" => $this->class->getValue(),
+            "code" => $this->code->getValue(),
             "uuid" => $this->getUuid()
 
         ];
