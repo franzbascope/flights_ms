@@ -16,6 +16,9 @@
         <include>
             <directory suffix=".php">./packages/franz/fligths/src/Models</directory>
             <directory suffix=".php">./packages/franz/fligths/src/Repositories</directory>
+            <directory suffix=".php">./packages/franz/fligths/src/Http/Controllers</directory>
+            <directory suffix=".php">./packages/franz/fligths/src/Factory</directory>
+            <directory suffix=".php">./packages/franz/fligths/src/CQRS</directory>
         </include>
     </coverage>
     <php>

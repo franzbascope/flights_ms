@@ -5,8 +5,8 @@ namespace Franz\Fligths\Http\Controllers;
 use Franz\Fligths\CQRS\Commands\AddFlightCommand;
 use Franz\Fligths\CQRS\Commands\AddFlightProgramCommand;
 use Franz\Fligths\Repositories\IItinieraryRepository;
-use Illuminate\Http\Request;
 use Ecotone\Modelling\CommandBus;
+use Illuminate\Http\Request;
 
 class ItineraryController
 {
@@ -33,7 +33,7 @@ class ItineraryController
     }
 
     public function addFlightProgram(string $itinerary_uuid, Request $request){
-        $data = $request->all()["flight_program"];
+        $data = $request->get("flight_program");
         $command = new AddFlightProgramCommand($itinerary_uuid,$data);
         return $this->commandBus->send($command);
     }
