@@ -3,6 +3,7 @@
 namespace Franz\Fligths\Repositories;
 
 use Franz\Fligths\Database\CacheDatabase;
+use Franz\Fligths\Database\IDatabase;
 use Franz\Fligths\Factory\ItineraryFactory;
 use Illuminate\Support\Facades\Cache;
 
@@ -10,9 +11,12 @@ class ItineraryRepository implements IItinieraryRepository
 {
     private $database;
 
-    public function __construct()
+    public function __construct(IDatabase $database = null)
     {
-        $this->database = new CacheDatabase();
+        if ($database === null)
+            $this->database = new CacheDatabase();
+        else
+            $this->database = $database;
     }
 
 

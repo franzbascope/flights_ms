@@ -15,6 +15,7 @@
     <coverage processUncoveredFiles="false">
         <include>
             <directory suffix=".php">./packages/franz/fligths/src/Models</directory>
+            <directory suffix=".php">./packages/franz/fligths/src/Repositories</directory>
         </include>
     </coverage>
     <php>

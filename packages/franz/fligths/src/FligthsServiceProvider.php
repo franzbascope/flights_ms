@@ -4,6 +4,8 @@ namespace Franz\Fligths;
 
 use Franz\Fligths\Airport\AirportClient;
 use Franz\Fligths\Airport\IAirportClient;
+use Franz\Fligths\Database\CacheDatabase;
+use Franz\Fligths\Database\IDatabase;
 use Franz\Fligths\Repositories\AddFlightProgram;
 use Franz\Fligths\Repositories\IAddFlightProgram;
 use Franz\Fligths\Repositories\IItinieraryRepository;

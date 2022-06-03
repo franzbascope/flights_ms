@@ -6,6 +6,7 @@ use Franz\Fligths\Database\ItinerarySeeds;
 use Franz\Fligths\Repositories\ItineraryRepository;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\App;
 
 class ItinerarySeeder extends Seeder
 {

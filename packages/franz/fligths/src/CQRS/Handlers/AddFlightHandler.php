@@ -7,6 +7,7 @@ use Franz\Fligths\CQRS\Commands\AddFlightCommand;
 use Franz\Fligths\Repositories\AddFlight;
 use Franz\Fligths\Repositories\IAddFlight;
 use Franz\Fligths\Repositories\ItineraryRepository;
+use Illuminate\Support\Facades\App;
 
 
 class AddFlightHandler

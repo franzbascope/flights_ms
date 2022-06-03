@@ -4,11 +4,11 @@ namespace Franz\Fligths\Database;
 
 use Illuminate\Support\Facades\Cache;
 
-class CacheDatabase
+class CacheDatabase implements IDatabase
 {
 
     private function getData(){
-        return  Cache::get("fligths_ms");
+        return  Cache::get("fligths_ms") ?? [];
     }
 
     public function setItinieraries($itineraries){
@@ -17,7 +17,7 @@ class CacheDatabase
         Cache::put("fligths_ms",$fligths_ms);
     }
 
-    public function getItineraries(){
+    public function getItineraries($data = []){
         $flights_ms = Cache::get("fligths_ms");
         return $flights_ms["itineraries"];
     }
