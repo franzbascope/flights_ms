@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use Franz\Airplanes\Factory\AircraftSeatFactory;
+use Franz\Airplanes\Models\Coverage;
 use PHPUnit\Framework\TestCase;
 
 class AircraftSeatTest extends TestCase
@@ -32,5 +33,10 @@ class AircraftSeatTest extends TestCase
         $this->expectExceptionMessage("Seat code must be 3 characters");
         $data = ["class" => "first_class","code" => "ABC1"];
         AircraftSeatFactory::createAircraftSeat($data)->toArray();
+    }
+
+    public function testModelCoverage(){
+        $test = new Coverage("test");
+        $this->assertEquals("test",$test->test,"Test property must be assigned");
     }
 }
