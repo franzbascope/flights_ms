@@ -2,6 +2,8 @@
 
 namespace Franz\Fligths;
 
+use Franz\Fligths\Airport\AirportClient;
+use Franz\Fligths\Airport\IAirportClient;
 use Franz\Fligths\Repositories\AddFlightProgram;
 use Franz\Fligths\Repositories\IAddFlightProgram;
 use Franz\Fligths\Repositories\IItinieraryRepository;
@@ -38,6 +40,7 @@ class FligthsServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/fligths.php', 'fligths');
         $this->app->bind(IAddFlightProgram::class,AddFlightProgram::class);
         $this->app->bind(IItinieraryRepository::class,ItineraryRepository::class);
+        $this->app->bind(IAirportClient::class,AirportClient::class);
 
         // Register the service the package provides.
         $this->app->singleton('fligths', function ($app) {

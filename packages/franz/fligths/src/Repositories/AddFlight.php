@@ -3,6 +3,7 @@
 namespace Franz\Fligths\Repositories;
 
 use Franz\Fligths\Factory\FlightFactory;
+use Illuminate\Support\Facades\App;
 
 class AddFlight implements IAddFlight
 {
@@ -26,7 +27,8 @@ class AddFlight implements IAddFlight
             return $flight_program_uuid === $program["uuid"];
         });
         // create flight and update program
-        $flight = FlightFactory::createFlight($flight_program["source_code"],$data)->serialize();
+        $factory = App::make(FlightFactory::class);
+        $flight = $factory->createFlight($flight_program["source_code"],$data)->serialize();
         $flight_program["flight"] = $flight;
 
         // update flight programs

@@ -4,7 +4,7 @@ namespace Franz\Fligths\Airport;
 
 use Illuminate\Support\Facades\Http;
 
-class AirportClient
+class AirportClient implements IAirportClient
 {
 
     private string $base_url;
