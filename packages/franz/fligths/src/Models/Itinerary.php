@@ -11,7 +11,6 @@ class Itinerary extends Entity
     public string $source_code;
     public string $destiny_code;
     public array $flight_programs;
-    private AirportClient $airportClient;
 
     /**
      * @param string $source
@@ -22,10 +21,10 @@ class Itinerary extends Entity
     public function __construct(string $source, string $destiny, array $flight_programs)
     {
         parent::__construct();
-        $this->airportClient = new AirportClient();
-        // validate if airports exist
-        $this->airportClient->getAirportByCityCode($source);
-        $this->airportClient->getAirportByCityCode($destiny);
+//        $this->airportClient = new AirportClient();
+//        // validate if airports exist
+//        $this->airportClient->getAirportByCityCode($source);
+//        $this->airportClient->getAirportByCityCode($destiny);
 
         $this->source_code = $source;
         $this->destiny_code = $destiny;

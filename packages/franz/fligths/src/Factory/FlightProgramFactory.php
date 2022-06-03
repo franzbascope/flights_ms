@@ -3,12 +3,13 @@
 namespace Franz\Fligths\Factory;
 
 use Franz\Fligths\Models\FlightProgram;
+use Illuminate\Support\Facades\App;
 
 class FlightProgramFactory
 {
     public static function create(array $data)
     {
-        return new FlightProgram($data["source_code"], $data["destiny_code"]);
+        return App::make(FlightProgram::class, $data);
     }
 
 }
