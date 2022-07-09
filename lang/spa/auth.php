@@ -14,7 +14,7 @@ return [
     */
 
     'error' => 'Sus credenciales no funcionaron',
-    'contraseña' => 'La contraseña digitada no es correcta.',
+    'contraseña' => 'La contraseña ingresada no es correcta.',
     'limitacion' => 'muchos intentos. intentar de nuevo en :seconds segundos.',
 
 ];
